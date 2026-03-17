@@ -46,10 +46,10 @@ export default function Dashboard() {
                   <span>Checked reminders</span><span className="text-primary">+10 XP</span>
                 </div>
                 <div className="flex justify-between text-muted-foreground">
-                  <span>Used Astra</span><span className="text-neon-purple">+20 XP</span>
+                  <span>Attendance</span><span className="text-neon-purple">+20 XP</span>
                 </div>
                 <div className="flex justify-between text-muted-foreground">
-                  <span>Event attendance</span><span className="text-accent">+50 XP</span>
+                  <span>Assignment</span><span className="text-accent">+50 XP</span>
                 </div>
               </div>
             </div>
