@@ -31,10 +31,4 @@ BEGIN;
 COMMIT;
 ALTER PUBLICATION supabase_realtime ADD TABLE public.events;
 
--- 5. Insert some default dummy data so you can see it working immediately
-INSERT INTO public.events (title, deadline, icon, accent) VALUES
-('Semester Exam Schedule Released', 'Mar 25', 'Calendar', 'neon-cyan'),
-('HackFest 2026 — Registrations Open', 'Mar 30', 'Code2', 'neon-purple'),
-('NSS Community Service Event', 'Mar 22', 'Trophy', 'neon-blue'),
-('National Scholarship Portal Update', 'Apr 01', 'GraduationCap', 'neon-cyan'),
-('AI Workshop by Google DSC', 'Mar 28', 'Megaphone', 'neon-purple');
+
