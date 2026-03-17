@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ProfileCard from "@/components/dashboard/ProfileCard";
-import TasksPanel from "@/components/dashboard/TasksPanel";
+import AssignmentsPanel from "@/components/dashboard/AssignmentsPanel";
 import NoticesPanel from "@/components/dashboard/NoticesPanel";
 import TimetablePanel from "@/components/dashboard/TimetablePanel";
 import DateSection from "@/components/dashboard/DateSection";
@@ -23,7 +23,7 @@ export default function Dashboard() {
           {/* Left Column */}
           <div className="flex flex-col gap-4">
             <ProfileCard />
-            <TasksPanel />
+            <AssignmentsPanel />
           </div>
 
           {/* Center Column */}
