@@ -1,4 +1,5 @@
 import { useState } from "react";
+import DashboardHeader from "@/components/dashboard/DashboardHeader";
 import ProfileCard from "@/components/dashboard/ProfileCard";
 import AssignmentsPanel from "@/components/dashboard/AssignmentsPanel";
 import NoticesPanel from "@/components/dashboard/NoticesPanel";
@@ -19,6 +20,8 @@ export default function Dashboard() {
         transition={{ duration: 0.3 }}
         className="min-h-screen p-4 md:p-6 max-w-7xl mx-auto"
       >
+        <DashboardHeader />
+        
         <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr_260px] gap-4 md:gap-5 mb-4">
           {/* Left Column */}
           <div className="flex flex-col gap-4">

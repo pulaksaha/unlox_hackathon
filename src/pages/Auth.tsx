@@ -43,10 +43,11 @@ export default function Auth() {
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-neon-cyan to-neon-purple flex items-center justify-center">
               <Bot className="w-6 h-6 text-background" />
             </div>
-            <h1 className="font-display text-2xl font-bold gradient-text">CampusBot Pro</h1>
+            <h1 className="font-display text-2xl font-bold gradient-text">Astra</h1>
           </div>
-          <p className="text-muted-foreground text-sm">Your AI-powered student command center</p>
+          <p className="text-muted-foreground text-sm">Your intelligent campus assistant</p>
         </div>
+
 
         <div className="space-y-4">
           <Input
