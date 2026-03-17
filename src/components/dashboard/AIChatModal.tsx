@@ -123,7 +123,9 @@ export default function AIChatModal({ open, onClose }: { open: boolean; onClose:
                         ? "bg-accent text-accent-foreground"
                         : "bg-muted/50 text-foreground"
                     }`}>
-                      <ReactMarkdown className="prose prose-sm prose-invert max-w-none [&>p]:m-0">{m.content}</ReactMarkdown>
+                      <div className="prose prose-sm prose-invert max-w-none [&>p]:m-0">
+                        <ReactMarkdown>{m.content}</ReactMarkdown>
+                      </div>
                     </div>
                     {m.role === "user" && (
                       <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center shrink-0 mt-1">
