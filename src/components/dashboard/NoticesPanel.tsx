@@ -3,16 +3,14 @@ import { Megaphone, Code2, Trophy, GraduationCap, Calendar, Bell } from "lucide-
 import { useEvents } from "@/hooks/useEvents";
 import { Skeleton } from "@/components/ui/skeleton";
 
-// Map string icon names from DB to actual lucide-react components
-const getIcon = (iconName: string) => {
-  switch (iconName) {
-    case 'Calendar': return Calendar;
-    case 'Code2': return Code2;
-    case 'Trophy': return Trophy;
-    case 'GraduationCap': return GraduationCap;
-    case 'Megaphone': return Megaphone;
-    default: return Bell;
-  }
+// Map categories to appropriate icons and accents
+const getIconProps = (category: string | null) => {
+  const cat = category?.toLowerCase() || '';
+  if (cat.includes('exam') || cat.includes('schedule')) return { icon: Calendar, accent: 'neon-cyan' };
+  if (cat.includes('hackathon') || cat.includes('tech')) return { icon: Code2, accent: 'neon-purple' };
+  if (cat.includes('scholarship') || cat.includes('academic')) return { icon: GraduationCap, accent: 'neon-blue' };
+  if (cat.includes('event')) return { icon: Trophy, accent: 'neon-purple' };
+  return { icon: Megaphone, accent: 'neon-cyan' };
 };
 
 export default function NoticesPanel() {
@@ -40,15 +38,15 @@ export default function NoticesPanel() {
       ) : (
         <div className="grid gap-3">
           {events.map((n) => {
-            const IconComponent = getIcon(n.icon);
+            const { icon: IconComponent, accent } = getIconProps(n.category);
             return (
               <div key={n.id} className={`glass-card glass-card-hover p-3 flex items-start gap-3`}>
-                <div className={`w-8 h-8 rounded-md bg-${n.accent}/10 flex items-center justify-center shrink-0`}>
-                  <IconComponent className={`w-4 h-4 text-${n.accent}`} />
+                <div className={`w-8 h-8 rounded-md bg-${accent}/10 flex items-center justify-center shrink-0`}>
+                  <IconComponent className={`w-4 h-4 text-${accent}`} />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-sm text-foreground font-medium">{n.title}</p>
-                  <p className="text-xs text-muted-foreground">Deadline: {n.deadline}</p>
+                  <p className="text-sm text-foreground font-medium">{n.message}</p>
+                  {n.deadline && <p className="text-xs text-muted-foreground">Deadline: {n.deadline}</p>}
                 </div>
               </div>
             );

@@ -3,10 +3,10 @@ import { assignmentsClient } from "@/integrations/supabase/assignmentsClient";
 
 export interface CampusEvent {
   id: string;
-  title: string;
-  deadline: string;
-  icon: string;
-  accent: string;
+  message: string;
+  deadline: string | null;
+  category: string | null;
+  source: string | null;
   created_at: string;
 }
 

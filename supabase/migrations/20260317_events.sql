@@ -6,10 +6,10 @@
 -- 1. Create the events table
 CREATE TABLE IF NOT EXISTS public.events (
   id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
-  title text NOT NULL,
-  deadline text NOT NULL, -- e.g. 'Mar 25'
-  icon text DEFAULT 'Megaphone', -- 'Megaphone', 'Code2', 'Trophy', 'GraduationCap', 'Calendar'
-  accent text DEFAULT 'neon-cyan', -- 'neon-cyan', 'neon-purple', 'neon-blue'
+  message text NOT NULL,
+  deadline text,
+  category text,
+  source text,
   created_at timestamp with time zone DEFAULT timezone('utc'::text, now()) NOT NULL
 );
 
