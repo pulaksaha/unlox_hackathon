@@ -4,6 +4,10 @@
 
 [build.environment]
   NODE_VERSION = "v20"
+  VITE_SUPABASE_URL = "https://yicrvugqnpfytbkgdjix.supabase.co"
+  VITE_SUPABASE_PUBLISHABLE_KEY = "sb_publishable_UeXh9Z04QjWw0TujCIPpXw_grlIfSWX"
+  VITE_ASSIGNMENTS_SUPABASE_URL = "https://rdmynrjjxjpzqtjegoxk.supabase.co"
+  VITE_ASSIGNMENTS_SUPABASE_KEY = "sb_publishable_AEQV-t5uBsVT4VjNoD6Mzg_Iyw2b73Z"
 
 [[redirects]]
   from = "/*"
